@@ -841,6 +841,9 @@ export default {
 
     this.cm.on('paste', this.onCmPaste)
 
+    // Set markdown rendering settings
+    md.set(siteConfig.mdEditorConfig)
+
     // Render initial preview
 
     this.processContent(this.$store.get('editor/content'))
